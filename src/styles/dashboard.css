@@ -1,0 +1,90 @@
+:root {
+  --teal: #0ea5a7;
+  --ice:  #e7f7fb;
+  --ink:  #0f172a;
+  --muted:#6b7280;
+  --white:#fff;
+}
+
+/* reuse the split background so it matches the auth screens */
+body {
+  background: linear-gradient(90deg, var(--teal) 50%, var(--ice) 50%);
+}
+
+.dash-shell{
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 20px;
+  color: var(--ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter,
+    "Helvetica Neue", Arial;
+}
+
+.dash-card{
+  width: min(1000px, 96vw);
+  background: var(--white);
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(2, 6, 23, 0.15);
+  padding: 28px 32px 26px;
+}
+
+.dash-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:4px;
+}
+
+.dash-title{
+  margin:0;
+  font-size:28px;
+  font-weight:800;
+  letter-spacing:.02rem;
+}
+
+.btn-logout{
+  appearance:none; border:0; cursor:pointer;
+  background:#ef4444; color:#fff; font-weight:800;
+  padding:10px 14px; border-radius:12px;
+  box-shadow:0 10px 22px rgba(239,68,68,.25);
+}
+.btn-logout:hover{ filter:brightness(1.05); }
+
+.dash-sub{
+  color:var(--muted);
+  margin: 8px 0 20px;
+}
+
+.dash-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:18px;
+}
+
+.stack{
+  background:#f8fafc;
+  border:1px solid #eef2f7;
+  border-radius:14px;
+  padding:16px 16px 14px;
+}
+.stack h3{
+  margin:0 0 8px;
+  font-size:18px;
+}
+.stack ul, .stack ol{
+  margin:0; padding-left:18px;
+}
+.stack li{ margin: 6px 0; }
+
+.dash-foot{
+  margin-top:18px;
+  color:var(--muted);
+}
+
+/* mobile */
+@media (max-width: 820px){
+  .dash-card{ width:min(720px, 94vw); }
+  .dash-grid{ grid-template-columns: 1fr; }
+}
