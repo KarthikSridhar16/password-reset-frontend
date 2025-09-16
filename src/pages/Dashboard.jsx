@@ -6,7 +6,6 @@ import "../styles/dashboard.css";
 export default function Dashboard() {
   const navigate = useNavigate();
 
-  // simple guard: if no token, bounce back to login
   useEffect(() => {
     const tok = localStorage.getItem("token");
     if (!tok) navigate("/login", { replace: true });

@@ -74,7 +74,6 @@ export default function Auth() {
 
       switchTo("login");
       setMsg({ type: "ok", text: "Account created successfully. Please log in." });
-      // ⬆️ ⬆️ changes end
 
     } catch (err) {
       setMsg({ type: "err", text: err.response?.data?.message || "Registration failed" });
@@ -117,7 +116,7 @@ export default function Auth() {
 
         <div className="forms-window">
           <div className="forms-track" style={{ "--x": mode === "login" ? "0%" : "-50%" }}>
-            {/* LOGIN */}
+
             <form className="form-pane" onSubmit={handleLogin}>
               <h2 className="title">Login</h2>
               <p className="helper">Welcome back. Enter your credentials to continue.</p>
@@ -157,7 +156,6 @@ export default function Auth() {
               </div>
             </form>
 
-            {/* REGISTER */}
             <form className="form-pane" onSubmit={handleRegister}>
               <h2 className="title">Create account</h2>
               <p className="helper">New here? Register and we’ll sign you in instantly.</p>
